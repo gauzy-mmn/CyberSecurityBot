@@ -61,7 +61,24 @@ namespace CyberSecurityBot
 
         }
 
+        public void RunConversationLoop()
+        {
 
+        }
+
+        private void ShowHelp()
+        {
+        }
+
+        private void TypeText()
+        {
+
+        }
+
+        private void DisplayDivider()
+        {
+
+        }
 
     }
 }

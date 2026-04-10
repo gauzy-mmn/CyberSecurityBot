@@ -8,5 +8,20 @@ namespace CyberSecurityBot
 {
     internal class InputValidator
     {
+        public static bool IsValid(string input)
+        {
+
+        }
+
+        public static bool IsValidName(string name)
+        {
+        }
+
+        public static string Sanitise(string input)
+        {
+
+        }
+
+
     }
 }
