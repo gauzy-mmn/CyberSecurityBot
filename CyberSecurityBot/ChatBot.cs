@@ -33,17 +33,28 @@ namespace CyberSecurityBot
         private void PlayVoiceGreeting()
         {
 
+            try
+            {
+                SoundPlayer player = new SoundPlayer("greeting.wav");
+                player.PlaySync();
+            }
+            catch (Exception)
+            {
+
+            }
         }
+        
         private void DisplayLogo()
         {
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("  ╔══════════════════════════════════════════════════════════════╗");
-            Console.WriteLine("  ║        CYBERSECURITY AWARENESS BOT  v" + Version + "                  ║");
+            Console.WriteLine("  ║        CYBERSECURITY AWARENESS BOT  v" + Version + "         ║");
             Console.WriteLine("  ║        Keeping South Africa Safe Online                      ║");
             Console.WriteLine("  ╚══════════════════════════════════════════════════════════════╝");
             Console.ResetColor();
             Console.WriteLine();
         }
+
         private void Greet()
         {
            
