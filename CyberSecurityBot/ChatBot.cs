@@ -13,7 +13,7 @@ namespace CyberSecurityBot
     
     internal class ChatBot
     {
-        //
+        
         public string BotName { get; private set; } // The chatbot's name
         public string UserName { get; set; }// The user's name
         public string Version { get; private set; } // The chatbot's version
