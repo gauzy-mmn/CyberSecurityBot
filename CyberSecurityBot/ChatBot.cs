@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Linq;
-using System.Media;   // Needed for SoundPlayer (voice greeting)
+using System.Media;   
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,7 +10,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace CyberSecurityBot
 {
-    //
+    
     internal class ChatBot
     {
         //
