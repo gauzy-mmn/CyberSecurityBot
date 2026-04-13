@@ -8,7 +8,7 @@ namespace CyberSecurityBot
 {
     internal class InputValidator
     {
-        public static bool IsValid(string input)
+        public static bool isValid(string input)
         {
             // Check for null, empty, or whitespace-only input
             if (string.IsNullOrWhiteSpace(input))
@@ -22,10 +22,10 @@ namespace CyberSecurityBot
             return true; // Input passed all checks
         }
 
-        public static bool IsValidName(string name)
+        public static bool isNameValid(string name)
         {
-            // First, run the standard IsValid check
-            if (!IsValid(name))
+            // First, run the standard isValid check
+            if (!isValid(name))
                 return false;
 
             // A name must have at least 2 characters

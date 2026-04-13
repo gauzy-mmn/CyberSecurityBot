@@ -29,16 +29,16 @@ namespace CyberSecurityBot
         // This method starts the chatbot by playing a voice greeting, displaying the logo, greeting the user, and entering the conversation loop.
         public void Start()
         {
-            PlayVoiceGreeting();
-            DisplayLogo();
+            VoiceGreeting();
+            ASCIILogo();
             Greet();
-            RunConversationLoop();
+            LoopConversation();
 
         }
 
 
         // This method plays a voice greeting using a .wav file. It uses the SoundPlayer class from System.Media.
-        private void PlayVoiceGreeting()
+        private void VoiceGreeting()
         {
 
             try
@@ -53,7 +53,7 @@ namespace CyberSecurityBot
         }
 
         // This method displays an ASCII art logo and some introductory text about the chatbot. It uses different console colors for styling.
-        private void DisplayLogo()
+        private void ASCIILogo()
         {
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -83,7 +83,7 @@ namespace CyberSecurityBot
 
             // Keep asking until a valid name is entered
             string input = Console.ReadLine();
-            while (!InputValidator.IsValidName(input))
+            while (!InputValidator.isNameValid(input))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 TypeText("  Please enter a valid name to continue: ");
@@ -121,7 +121,7 @@ namespace CyberSecurityBot
 
         }
 
-        public void RunConversationLoop()
+        public void LoopConversation()
         {
             while (true) // Loop runs forever until "break" is called
             {
@@ -134,7 +134,7 @@ namespace CyberSecurityBot
 
                 // --- Input Validation ---
                 // Check if input is empty or just whitespace
-                if (!InputValidator.IsValid(input))
+                if (!InputValidator.isValid(input))
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     TypeText($"\n  {BotName}: I didn't catch that. Could you rephrase?\n");
@@ -175,7 +175,7 @@ namespace CyberSecurityBot
                 DisplayDivider();
             }
         }
-
+        //
         private void ShowHelp()
         {
             Console.WriteLine();
@@ -192,10 +192,10 @@ namespace CyberSecurityBot
         // This method simulates a typing effect by printing one character at a time with a short delay.
         private void TypeText(string text)
         {
-            foreach (char c in text) // Loop through every character
+            foreach (char c in text) 
             {
-                Console.Write(c);         // Print one character
-                Thread.Sleep(18);         // Wait 18 milliseconds
+                Console.Write(c);         
+                Thread.Sleep(18);         
             }
             Console.WriteLine();
         }

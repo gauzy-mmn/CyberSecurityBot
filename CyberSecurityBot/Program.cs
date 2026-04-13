@@ -10,6 +10,8 @@ namespace CyberSecurityBot
     {
         static void Main(string[] args)
         {
+            // Calls the ChatBot class to start the chatbot session
+           
             ChatBot bot = new ChatBot();
 
             bot.Start();// Starts the chatbot session
